@@ -130,32 +130,32 @@ _Como se puede notar, no hace falta volver a implementar la interfaz `GraphUtils
 Los grafos no dirigidos son bidireccionales así que para agregar una arista se tiene que 
 agregar tanto al vértice de destino como al vecino:
 ```java
-    @Override
-    public void addEdge(T sourceVertex, T destinationVertex) {
-        if (hasVertex(sourceVertex) && hasVertex(destinationVertex)) {
-            List<Nodo<T>> sourceNeighbors = vertices.get(sourceVertex);
-            List<Nodo<T>> destinationNeighbors = vertices.get(destinationVertex);
+@Override
+public void addEdge(T sourceVertex, T destinationVertex) {
+    if (hasVertex(sourceVertex) && hasVertex(destinationVertex)) {
+        List<Nodo<T>> sourceNeighbors = vertices.get(sourceVertex);
+        List<Nodo<T>> destinationNeighbors = vertices.get(destinationVertex);
 
-            sourceNeighbors.add(new Nodo<>(destinationVertex));
-            destinationNeighbors.add(new Nodo<>(sourceVertex));
-        }
-   } 
+        sourceNeighbors.add(new Nodo<>(destinationVertex));
+        destinationNeighbors.add(new Nodo<>(sourceVertex));
+    }
+}
 ```
 
 Por último se añadirá el método para imprimir el grafo no dirigido:
 ```java
-    @Override
-    public void printGraph() {
-        for (Map.Entry<T, List<Nodo<T>>> entry : vertices.entrySet()) {
-            T vertex = entry.getKey();
-            List<Nodo<T>> neighbors = entry.getValue();
-            System.out.print(vertex + " -> ");
-            for (Nodo<T> neighbor : neighbors) {
-                System.out.print(neighbor.getData() + " ");
-            }
-            System.out.println();
+@Override
+public void printGraph() {
+    for (Map.Entry<T, List<Nodo<T>>> entry : vertices.entrySet()) {
+        T vertex = entry.getKey();
+        List<Nodo<T>> neighbors = entry.getValue();
+        System.out.print(vertex + " -> ");
+        for (Nodo<T> neighbor : neighbors) {
+            System.out.print(neighbor.getData() + " ");
         }
+        System.out.println();
     }
+}
 ```
 
  _Se recorre el grafo, se obtiene el nodo actual y se recorre la lista de sus vecinos._
@@ -174,13 +174,13 @@ public class DirectedGraph<T> extends Graph<T> {
 Al contrario que el grafo no dirigido, aquí solo se agrega una vez el vértice cuando se
 añade una nueva arista:
 ```java
-    @Override
-    public void addEdge(T sourceVertex, T destinationVertex) {
-        if (vertices.containsKey(sourceVertex) && vertices.containsKey(destinationVertex)) {
-            List<Nodo<T>> neighbors = vertices.get(sourceVertex);
-            neighbors.add(new Nodo<>(destinationVertex));
-        }
+@Override
+public void addEdge(T sourceVertex, T destinationVertex) {
+    if (vertices.containsKey(sourceVertex) && vertices.containsKey(destinationVertex)) {
+        List<Nodo<T>> neighbors = vertices.get(sourceVertex);
+        neighbors.add(new Nodo<>(destinationVertex));
     }
+}
 ```
 
 A diferencia del `printGraph()` del grafo no dirigido, radica en como se están representando las
