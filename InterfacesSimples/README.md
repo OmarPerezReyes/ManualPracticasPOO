@@ -1,3 +1,5 @@
+##### Jesus Alfonso Castillo Gallegos
+
 # InterfacesSimple
 Este manual proporciona una guía básica sobre cómo trabajar con interfaces en el lenguaje de programación Java. Las interfaces son una parte fundamental de la programación orientada a objetos en Java y permiten la definición de contratos que las clases deben seguir.
 
