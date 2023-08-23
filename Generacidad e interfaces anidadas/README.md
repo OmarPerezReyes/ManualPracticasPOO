@@ -7,6 +7,16 @@ Utilizar interfaces anidadas y generacidad en Java desarrollando un sistema de g
 - Comprender y aplicar interfaces anidadas para organizar jerarquías de clases relacionadas.
 - Aprender a utilizar la generacidad para trabajar con diferentes tipos de figuras geométricas de manera flexible.
 
+## Antes de iniciar:
+- **Interfaces Anidadas.** Las interfaces anidadas son una característica en Java que permite definir interfaces dentro de otras interfaces o clases. Esto puede resultar útil para agrupar clases relacionadas y estructurar tu código de manera más organizada. Las clases anidadas pueden implementar la interfaz anidada, lo que proporciona una forma de establecer una relación más estrecha entre las clases y las interfaces que utilizan.
+    - Organización jerárquica: Las interfaces anidadas permiten crear una jerarquía más clara y organizada de clases e interfaces relacionadas.
+    - Encapsulación: Las interfaces anidadas pueden estar encapsuladas dentro de una clase o interfaz, lo que limita su visibilidad y facilita el control del acceso.
+    - Agrupación lógica: Las clases anidadas pueden agrupar clases e interfaces que están relacionadas lógicamente, lo que mejora la comprensión del código.
+- **Generacidad.** Es una característica en Java que permite crear clases, interfaces y métodos que pueden trabajar con tipos específicos sin ser definidos de antemano. En otras palabras, puedes crear componentes que sean reutilizables y flexibles para trabajar con diferentes tipos de datos. Esto se logra mediante la definición de tipos genéricos en la declaración de clases, interfaces o métodos.
+    - Reutilización de código: La generacidad permite crear componentes que pueden ser utilizados con múltiples tipos de datos sin tener que duplicar el código.
+    - Seguridad de tipos: Los genéricos proporcionan verificación de tipos en tiempo de compilación, lo que reduce los errores relacionados con el tipo en tiempo de ejecución.
+    - Flexibilidad: Puedes crear clases y métodos que trabajen con diferentes tipos de datos sin necesidad de escribir implementaciones específicas para cada tipo.
+
 ## 1. Definición de la Interfaz Figura y Clases Anidadas
 
 ### 1.1 Creación de la Interfaz Figura
