@@ -1,0 +1,30 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EjemploClaseAnidada {
+
+    public static void main(String[] args) {
+        // Crear una instancia de la clase Universidad
+        Universidad universidad = new Universidad("Mi Universidad");
+
+        // Crear instancias de la clase Estudiante y agregar cursos
+        Universidad.Estudiante estudiante1 = universidad.new Estudiante("Alice", 20);
+        estudiante1.agregarCurso("Matemáticas");
+        estudiante1.agregarCurso("Física");
+
+        Universidad.Estudiante estudiante2 = universidad.new Estudiante("Bob", 22);
+        estudiante2.agregarCurso("Ciencias de la Computación");
+        estudiante2.agregarCurso("Historia");
+
+        // Agregar los estudiantes a la lista de la universidad
+        universidad.agregarEstudiante(estudiante1.getNombre(), estudiante1.getEdad());
+        universidad.agregarEstudiante(estudiante2.getNombre(), estudiante2.getEdad());
+
+        // Mostrar la información de los estudiantes
+        universidad.mostrarInformacionEstudiantes();
+    }
+}
+
+
